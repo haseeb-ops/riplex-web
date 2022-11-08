@@ -1,0 +1,172 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+html{
+   scroll-behavior: smooth;
+   padding: 0px 70px;
+   font-family: "Open Sans",sans-serif;
+}
+body{
+   overflow-x: hidden;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+   width: 10px;
+}
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+   background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+
+/* Navbar (MenuBar) */
+.navbar{
+   position: fixed;
+   width: 100%;
+   z-index: 999;
+   height: max-content;
+   padding: 30px 0;
+   font-family: 'Ubuntu', sans-serif;
+   transition: all 0.3s ease;
+}
+.navbar.sticky{
+   padding: 15px 0;
+   background: #1a7da0;
+}
+.navbar .max-width{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.navbar .menu-ico{
+   list-style-type: none;
+}
+.navbar .menu-ico li{
+   display: inline;
+   margin-left: 13px;
+}
+.navbar .menu-ico li a{
+   padding: 14px 9px 6px 9px;
+   border-radius: 5px;
+   transition: ease 0.25s all;
+}
+.navbar .menu-ico li a:hover{
+   background-color: lightseagreen;
+   fill: #fff;
+}
+.navbar #menu{
+   margin: auto;
+   margin-left: 382px;
+}
+.navbar #menu li{
+   list-style: none;
+   display: inline;
+}
+.navbar #menu li .menu-list-btn{
+   color: #000;
+   font-size: 18px;
+   font-weight: 500;
+   text-transform: uppercase;
+   border-radius: 5px;
+   padding: 5px 15px;
+   transition: color 0.3s ease;
+}
+.navbar #menu li .menu-list-btn,
+.navbar #menu li .menu-list-btn:after,
+.navbar #menu li .menu-list-btn:before {
+   transition: all .5s;
+}
+.navbar #menu li .menu-list-btn:hover {
+   color: black;
+}
+.navbar.stroke #menu li .menu-list-btn{
+   position: relative;
+}
+.navbar.stroke #menu li .menu-list-btn:after{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 0%;
+   content: '.';
+   color: transparent;
+   background: lightseagreen;
+   height: 1px;
+}
+.navbar.stroke #menu li .menu-list-btn:hover:after {
+   width: 80%;
+   height: 2px;
+}
+.navbar.sticky #menu .menu-list-btn:hover{
+   color: lightseagreen;
+   padding: 5px 15px;
+   background-color: #fff;
+}
+
+/* First Page */
+.home{
+   width: 100%;
+   position: absolute;
+   text-align: justify;
+   font-family: 'Montserrat', sans-serif;
+   margin-top: 80px;
+}
+.home-pic{
+   width: calc(50%-50x);
+}
+.home .home-pic img{
+   width: 40%;
+   display: flex;
+   margin-top: -20px;
+   float: left;
+}
+.home-content{
+   display: inline;
+   float: left;
+   width: 50%;
+   padding-left: 65px;
+   margin-top: 100px;
+}
+.home .home-content .home-scale{
+   font-weight: 600;
+   margin-top: 10px;
+   letter-spacing: 0.5px;
+}
+.home .home-head{
+   font-size: 40px;
+   margin-bottom: 15px;
+}
+.home .home-content .home-txt{
+   width: 80%;
+   line-height: 22px;
+   letter-spacing: 0.5px;
+}
+.home .home-content a{
+   padding: 15px 20px;
+   border: 2px #000 solid;
+   border-radius: 30px;
+   color: #000;
+   font-size: 17px;
+   transition: ease all 0.25s;
+   font-weight: 700;
+}
+.home .home-content a:hover{
+   background-color: #000;
+   color: #fff;
+}
+
+
+
+
