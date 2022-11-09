@@ -9,11 +9,11 @@
 }
 html{
    scroll-behavior: smooth;
-   padding: 0px 70px;
    font-family: "Open Sans",sans-serif;
 }
 body{
    overflow-x: hidden;
+   padding: 0px 70px;
 }
 /* custom scroll bar */
 ::-webkit-scrollbar {
