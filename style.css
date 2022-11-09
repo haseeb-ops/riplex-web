@@ -39,8 +39,7 @@ body{
    height: max-content;
    padding: 25px 70px;
    transition: all 0.3s ease;
-   background-color: #008080;
-   color: #fff;
+   /* background-color: #008080; */
    margin-left: -70px;
 }
 /* .navbar.sticky{
@@ -66,22 +65,25 @@ body{
    padding: 14px 9px 6px 9px;
    border-radius: 5px;
    transition: ease 0.25s all;
-   fill: #fff;
+   fill: #000;
 }
 .navbar .menu-ico li a:hover{
-   background-color: #CCFFFF;
-   fill: #008080;
+   background-color: #ea1538;
+   fill: #fff;
+}
+.navbar .menu-ico #menu-ico-yt{
+   margin-top: 100px;
 }
 .navbar #menu{
    margin: auto;
-   margin-left: 375px;
+   margin-left: 430px;
 }
 .navbar #menu li{
    list-style: none;
    display: inline;
 }
 .navbar #menu li .menu-list-btn{
-   color: #fff;
+   color: #000;
    font-size: 16px;
    font-weight: 600;
    text-transform: uppercase;
@@ -94,9 +96,9 @@ body{
 .navbar #menu li .menu-list-btn:before {
    transition: all .5s;
 }
-.navbar #menu li .menu-list-btn:hover {
-   /* color: black; */
-}
+/* .navbar #menu li .menu-list-btn:hover {
+   color: black;
+} */
 .navbar.stroke #menu li .menu-list-btn{
    position: relative;
 }
@@ -109,7 +111,7 @@ body{
    width: 0%;
    content: '.';
    color: transparent;
-   background: #CCFFFF;
+   background: #ea1538;
    height: 1px;
 }
 .navbar.stroke #menu li .menu-list-btn:hover:after {
@@ -123,6 +125,7 @@ body{
    position: absolute;
    text-align: justify;
    margin-top: 80px;
+   font-family: 'Montserrat', sans-serif;
 }
 .home-pic{
    width: calc(50%-50x);
@@ -146,13 +149,14 @@ body{
    letter-spacing: 0.5px;
 }
 .home .home-head{
-   font-size: 40px;
+   font-size: 35px;
    margin-top: 5px;
    margin-bottom: 15px;
+   text-transform: uppercase;
 }
 .home .home-content .home-txt{
    width: 80%;
-   line-height: 22px;
+   line-height: 21.5px;
    letter-spacing: 0.5px;
 }
 .home .home-content div{
@@ -168,11 +172,10 @@ body{
    border-radius: 7px;
    display: inline-block;
    transition: all 0.8s, color 0.3s 0.3s;
-   background: #7ACCCC;
-   color: #000;
+   background: #ea1538;
+   color: #fff;
 }
 .home .home-content div a:hover{
-   color: #fff;
    box-shadow:300px 0 0 0 rgba(0,0,0,0.5) inset;
 }
 
@@ -188,24 +191,78 @@ body{
 }
 .how-we-work .card{
    box-shadow: 0 0 10px lightgray;
-   background-color: #CCFFFF;
+   background-color: #555;
    width: 25%;
-   height: 450px;
+   height: 325px;
    line-height: 20px;
-   padding: 40px;
+   padding: 30px 40px;
    margin-left: 50px;
    border-radius: 16px;
    text-align: center;
-   
+   transition: all ease 0.5s;
+   color: #fff;
 }
-.how-we-work .card img{
-   width: 100%;
-   border-radius: 16px;
+.how-we-work .card svg{
+   fill: #fff;
 }
 .how-we-work .card h3{
    font-family: 'Montserrat', sans-serif;
-   margin-top: 30px;
+   line-height: 21px;
+   margin-top: 20px;
+   padding: 2px;
+   border-bottom: 2px solid #ea1538;
+   transition: all ease 0.5s;
+   border-radius: 2px;
 }
 .how-we-work .card p{
    margin-top: 10px;
+   font-family: Poppins,sans-serif;
 }
+.how-we-work .card:hover{
+   background-color: #ea1538;
+}
+.how-we-work .card:hover h3{
+   border-bottom: 2px solid #fff;
+}
+
+/* OUR LATEST WORK */
+/* .works{
+   width: 89%;
+   height: 100%;
+   position: absolute;
+   margin-top: 1100px;
+   text-align: center;
+}
+
+.works-head{
+   font-size: 30px;
+   font-weight: 700;
+   font-family: 'Montserrat', sans-serif;
+   text-decoration: underline;
+   margin-bottom: 30px;
+   margin-top: 100px;
+}
+.reels{
+   width: 270px;
+   height: 400px;
+   background-color: #ea1538;
+   margin: 10px;
+   border-radius: 4px;
+   display: flex;
+   float: left;
+}
+.square{
+   width: 190px;
+   height: 190px;
+   margin: 10px;
+   margin-left: 300px;
+   background-color: #ea1538;
+   border-radius: 4px;
+}
+.square1{
+   width: 180px;
+   height: 180px;
+   margin: 10px;
+   background-color: #ea1538;
+   border-radius: 4px;
+} */
