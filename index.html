@@ -5,22 +5,27 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
-   <link rel="stylesheet" href="style.css">
+   <!-- ======== ONLINE CSS FOR ICONS ======== -->
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+   <!-- ======== STYLESHEET LINKED WITH THIS FILE ======== -->
    <link rel="stylesheet" href="responsive.css">
-   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">  
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
-   <script  src="script.js"></script>
-   <!-- <script src="script.js"></script> -->
-   <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script> -->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script> -->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script> -->
+   <link rel="stylesheet" href="swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="style.css">
+   <!-- ======== JS FILES ======== -->
+   <script src="script.js"></script>
+   <script src="swiper-bundle.min.js"></script>
+
    <title>Riplex Digital Marketing Agency</title>
+   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
-<body>
+<body> 
+   <!-- SCROLL INDICATOR -->
+   <div class="indicator-flex">
+      <div class="indicator-container">
+         <div class="indicator-progress-bar" id="myBar"></div>
+      </div>
+   </div>
    <!-- Navbar -->
    <nav class="navbar stroke">
       <div class="max-width">
@@ -39,7 +44,7 @@
       </div>
    </nav>
 
-   <!-- First Page -->
+   <!-- ++++++++++ FIRST PAGE ++++++++++ -->
    <div class="home" id="home">
       <div class="home-pic"><img src="img/Firstpage-01.png" alt="influencer"></div>
       <div class="home-content">
@@ -50,7 +55,7 @@
       </div>
    </div>
 
-   <!-- MARKETING -->
+   <!-- ++++++++++ MARKETING PAGE ++++++++++ -->
    <div class="marketings" id="services">
       <div class="marketing-head">SERVICES</div>
       <div class="marketing-float">
@@ -74,7 +79,7 @@
       </div>
    </div>
 
-   <!-- HOW WE WORKS -->
+   <!-- ++++++++++ HOW WE WORKS PAGE ++++++++++ -->
    <div class="how-we-work" id="how-works">
       <div class="how-head">HOW WE WORK?</div>
       <div class="float-left">
@@ -100,92 +105,264 @@
 
    <!-- Analytics -->
    <div class="about-us">
-      <div class="analytics">
-         <div class="analy-head about-head">Real Time Analytics</div>
-         <div class="analy-desc about-desc">Track your campaign's performance in real time through our powerful analytics to boost your brand!
-            Get access to data-driven insights and earn high ROI. You can access your influencer program with ease and improve the ROI from your influencer collaborations</div>
-         <div class="icons-to-centre">
-            <div class="desc-icons">
-               <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.258.001l.256.004.255.005.253.008.251.01.249.012.247.015.246.016.242.019.241.02.239.023.236.024.233.027.231.028.229.031.225.032.223.034.22.036.217.038.214.04.211.041.208.043.205.045.201.046.198.048.194.05.191.051.187.053.183.054.18.056.175.057.172.059.168.06.163.061.16.063.155.064.15.066.074.033.073.033.071.034.07.034.069.035.068.035.067.035.066.035.064.036.064.036.062.036.06.036.06.037.058.037.058.037.055.038.055.038.053.038.052.038.051.039.05.039.048.039.047.039.045.04.044.04.043.04.041.04.04.041.039.041.037.041.036.041.034.041.033.042.032.042.03.042.029.042.027.042.026.043.024.043.023.043.021.043.02.043.018.044.017.043.015.044.013.044.012.044.011.045.009.044.007.045.006.045.004.045.002.045.001.045v17l-.001.045-.002.045-.004.045-.006.045-.007.045-.009.044-.011.045-.012.044-.013.044-.015.044-.017.043-.018.044-.02.043-.021.043-.023.043-.024.043-.026.043-.027.042-.029.042-.03.042-.032.042-.033.042-.034.041-.036.041-.037.041-.039.041-.04.041-.041.04-.043.04-.044.04-.045.04-.047.039-.048.039-.05.039-.051.039-.052.038-.053.038-.055.038-.055.038-.058.037-.058.037-.06.037-.06.036-.062.036-.064.036-.064.036-.066.035-.067.035-.068.035-.069.035-.07.034-.071.034-.073.033-.074.033-.15.066-.155.064-.16.063-.163.061-.168.06-.172.059-.175.057-.18.056-.183.054-.187.053-.191.051-.194.05-.198.048-.201.046-.205.045-.208.043-.211.041-.214.04-.217.038-.22.036-.223.034-.225.032-.229.031-.231.028-.233.027-.236.024-.239.023-.241.02-.242.019-.246.016-.247.015-.249.012-.251.01-.253.008-.255.005-.256.004-.258.001-.258-.001-.256-.004-.255-.005-.253-.008-.251-.01-.249-.012-.247-.015-.245-.016-.243-.019-.241-.02-.238-.023-.236-.024-.234-.027-.231-.028-.228-.031-.226-.032-.223-.034-.22-.036-.217-.038-.214-.04-.211-.041-.208-.043-.204-.045-.201-.046-.198-.048-.195-.05-.19-.051-.187-.053-.184-.054-.179-.056-.176-.057-.172-.059-.167-.06-.164-.061-.159-.063-.155-.064-.151-.066-.074-.033-.072-.033-.072-.034-.07-.034-.069-.035-.068-.035-.067-.035-.066-.035-.064-.036-.063-.036-.062-.036-.061-.036-.06-.037-.058-.037-.057-.037-.056-.038-.055-.038-.053-.038-.052-.038-.051-.039-.049-.039-.049-.039-.046-.039-.046-.04-.044-.04-.043-.04-.041-.04-.04-.041-.039-.041-.037-.041-.036-.041-.034-.041-.033-.042-.032-.042-.03-.042-.029-.042-.027-.042-.026-.043-.024-.043-.023-.043-.021-.043-.02-.043-.018-.044-.017-.043-.015-.044-.013-.044-.012-.044-.011-.045-.009-.044-.007-.045-.006-.045-.004-.045-.002-.045-.001-.045v-17l.001-.045.002-.045.004-.045.006-.045.007-.045.009-.044.011-.045.012-.044.013-.044.015-.044.017-.043.018-.044.02-.043.021-.043.023-.043.024-.043.026-.043.027-.042.029-.042.03-.042.032-.042.033-.042.034-.041.036-.041.037-.041.039-.041.04-.041.041-.04.043-.04.044-.04.046-.04.046-.039.049-.039.049-.039.051-.039.052-.038.053-.038.055-.038.056-.038.057-.037.058-.037.06-.037.061-.036.062-.036.063-.036.064-.036.066-.035.067-.035.068-.035.069-.035.07-.034.072-.034.072-.033.074-.033.151-.066.155-.064.159-.063.164-.061.167-.06.172-.059.176-.057.179-.056.184-.054.187-.053.19-.051.195-.05.198-.048.201-.046.204-.045.208-.043.211-.041.214-.04.217-.038.22-.036.223-.034.226-.032.228-.031.231-.028.234-.027.236-.024.238-.023.241-.02.243-.019.245-.016.247-.015.249-.012.251-.01.253-.008.255-.005.256-.004.258-.001.258.001zm-9.258 20.499v.01l.001.021.003.021.004.022.005.021.006.022.007.022.009.023.01.022.011.023.012.023.013.023.015.023.016.024.017.023.018.024.019.024.021.024.022.025.023.024.024.025.052.049.056.05.061.051.066.051.07.051.075.051.079.052.084.052.088.052.092.052.097.052.102.051.105.052.11.052.114.051.119.051.123.051.127.05.131.05.135.05.139.048.144.049.147.047.152.047.155.047.16.045.163.045.167.043.171.043.176.041.178.041.183.039.187.039.19.037.194.035.197.035.202.033.204.031.209.03.212.029.216.027.219.025.222.024.226.021.23.02.233.018.236.016.24.015.243.012.246.01.249.008.253.005.256.004.259.001.26-.001.257-.004.254-.005.25-.008.247-.011.244-.012.241-.014.237-.016.233-.018.231-.021.226-.021.224-.024.22-.026.216-.027.212-.028.21-.031.205-.031.202-.034.198-.034.194-.036.191-.037.187-.039.183-.04.179-.04.175-.042.172-.043.168-.044.163-.045.16-.046.155-.046.152-.047.148-.048.143-.049.139-.049.136-.05.131-.05.126-.05.123-.051.118-.052.114-.051.11-.052.106-.052.101-.052.096-.052.092-.052.088-.053.083-.051.079-.052.074-.052.07-.051.065-.051.06-.051.056-.05.051-.05.023-.024.023-.025.021-.024.02-.024.019-.024.018-.024.017-.024.015-.023.014-.024.013-.023.012-.023.01-.023.01-.022.008-.022.006-.022.006-.022.004-.022.004-.021.001-.021.001-.021v-4.127l-.077.055-.08.053-.083.054-.085.053-.087.052-.09.052-.093.051-.095.05-.097.05-.1.049-.102.049-.105.048-.106.047-.109.047-.111.046-.114.045-.115.045-.118.044-.12.043-.122.042-.124.042-.126.041-.128.04-.13.04-.132.038-.134.038-.135.037-.138.037-.139.035-.142.035-.143.034-.144.033-.147.032-.148.031-.15.03-.151.03-.153.029-.154.027-.156.027-.158.026-.159.025-.161.024-.162.023-.163.022-.165.021-.166.02-.167.019-.169.018-.169.017-.171.016-.173.015-.173.014-.175.013-.175.012-.177.011-.178.01-.179.008-.179.008-.181.006-.182.005-.182.004-.184.003-.184.002h-.37l-.184-.002-.184-.003-.182-.004-.182-.005-.181-.006-.179-.008-.179-.008-.178-.01-.176-.011-.176-.012-.175-.013-.173-.014-.172-.015-.171-.016-.17-.017-.169-.018-.167-.019-.166-.02-.165-.021-.163-.022-.162-.023-.161-.024-.159-.025-.157-.026-.156-.027-.155-.027-.153-.029-.151-.03-.15-.03-.148-.031-.146-.032-.145-.033-.143-.034-.141-.035-.14-.035-.137-.037-.136-.037-.134-.038-.132-.038-.13-.04-.128-.04-.126-.041-.124-.042-.122-.042-.12-.044-.117-.043-.116-.045-.113-.045-.112-.046-.109-.047-.106-.047-.105-.048-.102-.049-.1-.049-.097-.05-.095-.05-.093-.052-.09-.051-.087-.052-.085-.053-.083-.054-.08-.054-.077-.054v4.127zm0-5.654v.011l.001.021.003.021.004.021.005.022.006.022.007.022.009.022.01.022.011.023.012.023.013.023.015.024.016.023.017.024.018.024.019.024.021.024.022.024.023.025.024.024.052.05.056.05.061.05.066.051.07.051.075.052.079.051.084.052.088.052.092.052.097.052.102.052.105.052.11.051.114.051.119.052.123.05.127.051.131.05.135.049.139.049.144.048.147.048.152.047.155.046.16.045.163.045.167.044.171.042.176.042.178.04.183.04.187.038.19.037.194.036.197.034.202.033.204.032.209.03.212.028.216.027.219.025.222.024.226.022.23.02.233.018.236.016.24.014.243.012.246.01.249.008.253.006.256.003.259.001.26-.001.257-.003.254-.006.25-.008.247-.01.244-.012.241-.015.237-.016.233-.018.231-.02.226-.022.224-.024.22-.025.216-.027.212-.029.21-.03.205-.032.202-.033.198-.035.194-.036.191-.037.187-.039.183-.039.179-.041.175-.042.172-.043.168-.044.163-.045.16-.045.155-.047.152-.047.148-.048.143-.048.139-.05.136-.049.131-.05.126-.051.123-.051.118-.051.114-.052.11-.052.106-.052.101-.052.096-.052.092-.052.088-.052.083-.052.079-.052.074-.051.07-.052.065-.051.06-.05.056-.051.051-.049.023-.025.023-.024.021-.025.02-.024.019-.024.018-.024.017-.024.015-.023.014-.023.013-.024.012-.022.01-.023.01-.023.008-.022.006-.022.006-.022.004-.021.004-.022.001-.021.001-.021v-4.139l-.077.054-.08.054-.083.054-.085.052-.087.053-.09.051-.093.051-.095.051-.097.05-.1.049-.102.049-.105.048-.106.047-.109.047-.111.046-.114.045-.115.044-.118.044-.12.044-.122.042-.124.042-.126.041-.128.04-.13.039-.132.039-.134.038-.135.037-.138.036-.139.036-.142.035-.143.033-.144.033-.147.033-.148.031-.15.03-.151.03-.153.028-.154.028-.156.027-.158.026-.159.025-.161.024-.162.023-.163.022-.165.021-.166.02-.167.019-.169.018-.169.017-.171.016-.173.015-.173.014-.175.013-.175.012-.177.011-.178.009-.179.009-.179.007-.181.007-.182.005-.182.004-.184.003-.184.002h-.37l-.184-.002-.184-.003-.182-.004-.182-.005-.181-.007-.179-.007-.179-.009-.178-.009-.176-.011-.176-.012-.175-.013-.173-.014-.172-.015-.171-.016-.17-.017-.169-.018-.167-.019-.166-.02-.165-.021-.163-.022-.162-.023-.161-.024-.159-.025-.157-.026-.156-.027-.155-.028-.153-.028-.151-.03-.15-.03-.148-.031-.146-.033-.145-.033-.143-.033-.141-.035-.14-.036-.137-.036-.136-.037-.134-.038-.132-.039-.13-.039-.128-.04-.126-.041-.124-.042-.122-.043-.12-.043-.117-.044-.116-.044-.113-.046-.112-.046-.109-.046-.106-.047-.105-.048-.102-.049-.1-.049-.097-.05-.095-.051-.093-.051-.09-.051-.087-.053-.085-.052-.083-.054-.08-.054-.077-.054v4.139zm0-5.666v.011l.001.02.003.022.004.021.005.022.006.021.007.022.009.023.01.022.011.023.012.023.013.023.015.023.016.024.017.024.018.023.019.024.021.025.022.024.023.024.024.025.052.05.056.05.061.05.066.051.07.051.075.052.079.051.084.052.088.052.092.052.097.052.102.052.105.051.11.052.114.051.119.051.123.051.127.05.131.05.135.05.139.049.144.048.147.048.152.047.155.046.16.045.163.045.167.043.171.043.176.042.178.04.183.04.187.038.19.037.194.036.197.034.202.033.204.032.209.03.212.028.216.027.219.025.222.024.226.021.23.02.233.018.236.017.24.014.243.012.246.01.249.008.253.006.256.003.259.001.26-.001.257-.003.254-.006.25-.008.247-.01.244-.013.241-.014.237-.016.233-.018.231-.02.226-.022.224-.024.22-.025.216-.027.212-.029.21-.03.205-.032.202-.033.198-.035.194-.036.191-.037.187-.039.183-.039.179-.041.175-.042.172-.043.168-.044.163-.045.16-.045.155-.047.152-.047.148-.048.143-.049.139-.049.136-.049.131-.051.126-.05.123-.051.118-.052.114-.051.11-.052.106-.052.101-.052.096-.052.092-.052.088-.052.083-.052.079-.052.074-.052.07-.051.065-.051.06-.051.056-.05.051-.049.023-.025.023-.025.021-.024.02-.024.019-.024.018-.024.017-.024.015-.023.014-.024.013-.023.012-.023.01-.022.01-.023.008-.022.006-.022.006-.022.004-.022.004-.021.001-.021.001-.021v-4.153l-.077.054-.08.054-.083.053-.085.053-.087.053-.09.051-.093.051-.095.051-.097.05-.1.049-.102.048-.105.048-.106.048-.109.046-.111.046-.114.046-.115.044-.118.044-.12.043-.122.043-.124.042-.126.041-.128.04-.13.039-.132.039-.134.038-.135.037-.138.036-.139.036-.142.034-.143.034-.144.033-.147.032-.148.032-.15.03-.151.03-.153.028-.154.028-.156.027-.158.026-.159.024-.161.024-.162.023-.163.023-.165.021-.166.02-.167.019-.169.018-.169.017-.171.016-.173.015-.173.014-.175.013-.175.012-.177.01-.178.01-.179.009-.179.007-.181.006-.182.006-.182.004-.184.003-.184.001-.185.001-.185-.001-.184-.001-.184-.003-.182-.004-.182-.006-.181-.006-.179-.007-.179-.009-.178-.01-.176-.01-.176-.012-.175-.013-.173-.014-.172-.015-.171-.016-.17-.017-.169-.018-.167-.019-.166-.02-.165-.021-.163-.023-.162-.023-.161-.024-.159-.024-.157-.026-.156-.027-.155-.028-.153-.028-.151-.03-.15-.03-.148-.032-.146-.032-.145-.033-.143-.034-.141-.034-.14-.036-.137-.036-.136-.037-.134-.038-.132-.039-.13-.039-.128-.041-.126-.041-.124-.041-.122-.043-.12-.043-.117-.044-.116-.044-.113-.046-.112-.046-.109-.046-.106-.048-.105-.048-.102-.048-.1-.05-.097-.049-.095-.051-.093-.051-.09-.052-.087-.052-.085-.053-.083-.053-.08-.054-.077-.054v4.153zm8.74-8.179l-.257.004-.254.005-.25.008-.247.011-.244.012-.241.014-.237.016-.233.018-.231.021-.226.022-.224.023-.22.026-.216.027-.212.028-.21.031-.205.032-.202.033-.198.034-.194.036-.191.038-.187.038-.183.04-.179.041-.175.042-.172.043-.168.043-.163.045-.16.046-.155.046-.152.048-.148.048-.143.048-.139.049-.136.05-.131.05-.126.051-.123.051-.118.051-.114.052-.11.052-.106.052-.101.052-.096.052-.092.052-.088.052-.083.052-.079.052-.074.051-.07.052-.065.051-.06.05-.056.05-.051.05-.023.025-.023.024-.021.024-.02.025-.019.024-.018.024-.017.023-.015.024-.014.023-.013.023-.012.023-.01.023-.01.022-.008.022-.006.023-.006.021-.004.022-.004.021-.001.021-.001.021.001.021.001.021.004.021.004.022.006.021.006.023.008.022.01.022.01.023.012.023.013.023.014.023.015.024.017.023.018.024.019.024.02.025.021.024.023.024.023.025.051.05.056.05.06.05.065.051.07.052.074.051.079.052.083.052.088.052.092.052.096.052.101.052.106.052.11.052.114.052.118.051.123.051.126.051.131.05.136.05.139.049.143.048.148.048.152.048.155.046.16.046.163.045.168.043.172.043.175.042.179.041.183.04.187.038.191.038.194.036.198.034.202.033.205.032.21.031.212.028.216.027.22.026.224.023.226.022.231.021.233.018.237.016.241.014.244.012.247.011.25.008.254.005.257.004.26.001.26-.001.257-.004.254-.005.25-.008.247-.011.244-.012.241-.014.237-.016.233-.018.231-.021.226-.022.224-.023.22-.026.216-.027.212-.028.21-.031.205-.032.202-.033.198-.034.194-.036.191-.038.187-.038.183-.04.179-.041.175-.042.172-.043.168-.043.163-.045.16-.046.155-.046.152-.048.148-.048.143-.048.139-.049.136-.05.131-.05.126-.051.123-.051.118-.051.114-.052.11-.052.106-.052.101-.052.096-.052.092-.052.088-.052.083-.052.079-.052.074-.051.07-.052.065-.051.06-.05.056-.05.051-.05.023-.025.023-.024.021-.024.02-.025.019-.024.018-.024.017-.023.015-.024.014-.023.013-.023.012-.023.01-.023.01-.022.008-.022.006-.023.006-.021.004-.022.004-.021.001-.021.001-.021-.001-.021-.001-.021-.004-.021-.004-.022-.006-.021-.006-.023-.008-.022-.01-.022-.01-.023-.012-.023-.013-.023-.014-.023-.015-.024-.017-.023-.018-.024-.019-.024-.02-.025-.021-.024-.023-.024-.023-.025-.051-.05-.056-.05-.06-.05-.065-.051-.07-.052-.074-.051-.079-.052-.083-.052-.088-.052-.092-.052-.096-.052-.101-.052-.106-.052-.11-.052-.114-.052-.118-.051-.123-.051-.126-.051-.131-.05-.136-.05-.139-.049-.143-.048-.148-.048-.152-.048-.155-.046-.16-.046-.163-.045-.168-.043-.172-.043-.175-.042-.179-.041-.183-.04-.187-.038-.191-.038-.194-.036-.198-.034-.202-.033-.205-.032-.21-.031-.212-.028-.216-.027-.22-.026-.224-.023-.226-.022-.231-.021-.233-.018-.237-.016-.241-.014-.244-.012-.247-.011-.25-.008-.254-.005-.257-.004-.26-.001-.26.001z"/></svg>
-               <p>Data Powered Influencer Strategy</p>
-            </div>
-            <div class="desc-icons">
-               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M13.112 6l2.888-3.375-.781-.625-3.219 3.75-3.219-3.75-.781.625 2.888 3.375h-10.888v16h24v-16h-10.888zm7.888 14h-18v-12h18v12zm-4.594-5.247c-1.209.956-2.539 1.545-4.405 1.545-1.868 0-3.197-.589-4.407-1.545l-.394.394c.902 1.376 2.56 2.853 4.801 2.853 2.24 0 3.897-1.477 4.799-2.853l-.394-.394zm-7.206-4.753c-.663 0-1.2.537-1.2 1.2 0 .663.537 1.2 1.2 1.2.662 0 1.2-.537 1.2-1.2 0-.663-.538-1.2-1.2-1.2zm5.6 0c-.662 0-1.2.537-1.2 1.2 0 .663.538 1.2 1.2 1.2.663 0 1.2-.537 1.2-1.2 0-.663-.537-1.2-1.2-1.2z"/></svg>
-               <p>Data Powered Influencer Strategy</p>
-            </div>
-            <div class="desc-icons">
-               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M24 3.875l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm0 17.125v2h-24v-22h2v20h22z"/></svg>
-               <p>Data Powered Influencer Strategy</p>
-            </div>
-         </div>
-      </div>
       <div class="manage-req">
          <div class="about-head">Manage all your Influencer<br>Marketing Requirements</div>
          <table>
             <tr>
                <td><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm0-2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 6c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4zm0-2c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 4c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2z"/></svg></td>
-               <td><h6>Brand Awareness</h6>
-               <p>If awareness is what you’re after, TBM is an excellent way to go. We create effective brand awareness campaigns with measurable results</p></td>
+               <td>
+                  <h6>Brand Awareness</h6>
+                  <p>If awareness is what you’re after, TBM is an excellent way to go. We create effective brand awareness campaigns with measurable results</p>
+               </td>
                <td><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm1.476 14.955c.988-.405 1.757-1.211 2.116-2.216l2.408-6.739-6.672 2.387c-1.006.36-1.811 1.131-2.216 2.119l-3.065 7.494 7.429-3.045zm-.122-4.286c.551.551.551 1.446 0 1.996-.551.551-1.445.551-1.996 0-.551-.55-.551-1.445 0-1.996.551-.551 1.445-.551 1.996 0z"/></svg></td>
-               <td><h6>Product Launches</h6>
-               <p>To launch a plan successfully, it is very important to create a buzz. We help brands to push their ideas into the market with the right pre-launch and post-launch strategies</p></td>
-            </tr>
-            <tr>
+               <td>
+                  <h6>Product Launches</h6>
+                  <p>To launch a plan successfully, it is very important to create a buzz. We help brands to push their ideas into the market with the right pre-launch and post-launch strategies</p>
+               </td>
                <td><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"/></svg></td>
-               <td><h6>Lead Generation</h6>
-               <p>We power marketing programs that generate qualified leads and nurture sales opportunity</p></td>
-               <td><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm4.843 8.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291z" fill-rule="nonzero"/></svg></td>
-               <td><h6>App Installs</h6>
-               <p>The Bold Marketers can help you to stand out among millions of mobile apps on Google Play and Apple’s App Store</p></td>
+               <td>
+                  <h6>Lead Generation</h6>
+                  <p>We power marketing programs that generate qualified leads and nurture sales opportunity</p>
+               </td>
             </tr>
             <tr>
+               <td><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m11.998 2c5.517 0 9.997 4.48 9.997 9.998 0 5.517-4.48 9.997-9.997 9.997-5.518 0-9.998-4.48-9.998-9.997 0-5.518 4.48-9.998 9.998-9.998zm4.843 8.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291z" fill-rule="nonzero"/></svg></td>
+               <td>
+                  <h6>App Installs</h6>
+                  <p>The Bold Marketers can help you to stand out among millions of mobile apps on Google Play and Apple’s App Store</p>
+               </td>
                <td><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 18c0 1.104-.896 2-2 2h-12c-1.105 0-2-.896-2-2v-12c0-1.104.895-2 2-2h12c1.104 0 2 .896 2 2v12zm8-14l-6 6.223v3.554l6 6.223v-16z"/></svg></td>
-               <td><h6>Content Creation</h6>
-               <p>With guaranteed impactful content we make sure to achieve supremacy through word and phrase communications.</p></td>
+               <td>
+                  <h6>Content Creation</h6>
+                  <p>With guaranteed impactful content we make sure to achieve supremacy through word and phrase communications.</p>
+               </td>
                <td><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 20v2h-2v-2h2zm2-2h-6v6h6v-6zm6-1v5h-2v-5h2zm2-2h-6v9h6v-9zm6-2v9h-2v-9h2zm2-2h-6v13h6v-13zm0-11l-6 1.221 1.716 1.708-6.85 6.733-3.001-3.002-7.841 7.797 1.41 1.418 6.427-6.39 2.991 2.993 8.28-8.137 1.667 1.66 1.201-6.001z"/></svg></td>
-               <td><h6>Sale Promotion</h6>
-               <p>At TBM, we assist companies in driving product sales while increasing market share through various promotional activities</p></td>
+               <td>
+                  <h6>Sale Promotion</h6>
+                  <p>At TBM, we assist companies in driving product sales while increasing market share through various promotional activities</p>
+               </td>
             </tr>
          </table>
+      </div>
+   </div>
+   <!-- ++++++++++ OUR LATEST WORKS ++++++++++  -->
+   <div class="latest-works">
+      <div class="works-head">OUR RESENT WORKS</div>
+      <table class="image-gallery">
+         <tr>
+            <td rowspan="2"><video controls muted><source src="img/works/292551169_588743866151462_5049171031500976450_n.mp4"><div class="fa fa-play-circle"></div></video></td>
+            <td><img src="img/works/289485185_580692750333375_1197755062716977490_n.jpg" alt=""></td>
+            <td><img src="img/works/291661279_5169603003161834_5088986171774048166_n.jpg" alt=""></td>
+            <td rowspan="2"><video controls poster="img/works/Screenshot (15).png" muted><source src="img/works/290223071_1012350256150012_8529368350104383105_n.mp4" type="video/mp4"><div class="fa fa-play-circle"></div></video></td>
+         </tr>
+         <tr>
+            <td><img src="img/works/290128069_756311902472101_4681772740030885110_n.jpg" alt=""></td>
+            <td><video controls muted class="sqrt" poster="img/works/Screenshot (16).png"><source src="img/works/297156305_1705280426504926_3421914071513409724_n.mp4"><div class="fa fa-play-circle"></div></video></td>
+         </tr>
+      </table>
+   </div>
 
+   <!-- ++++++++++ OUR INFLUENCERS PAGE ++++++++++ -->
+   <div class="our-influencers">
+      <div class="influ-head">OUR INFLUENCERS</div>
+      <div class="our-influ-flex">
+         <section class="influ-sec">
+            <div class="swiper mySwiper container">
+               <div class="swiper-wrapper content">
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-slide card-influ">
+                  <div class="card-content">
+                     <!-- img1 -->
+                     <div class="image">
+                        <img src="img/1.jpg" alt="">
+                     </div>
+
+                     <div class="name-profession">
+                        <span class="name">Jalal Mudikkode</span>
+                        <span class="profession">Influencer Marketing</span>
+                     </div>
+
+                     <div class="media-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                  </div>
+               </div>
+               
+               </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-pagination"></div>
+         </section>
       </div>
    </div>
 
-
-   <!-- OUR INFLUENCERS -->
-   <!-- <div class="our-influ" id="our-influ">
-      <div class="influ-head">OUR INFLUENCERS</div>
-      <div class="imgs">
-         <div>
-            <img src="img/1.jpg" alt=""> -->
-            <!-- <h5>Haseeb Edavanna</h5> -->
-         <!-- </div>
-         <div><img src="img/2.jpg" alt=""></div>
-         <div><img src="img/3.jpg" alt=""></div>
-         <div><img src="img/4.jpg" alt=""></div>
-         <div><img src="img/5.jpg" alt=""></div>
-         <div>
-            <img src="img/1.jpg" alt=""> -->
-            <!-- <h5>Haseeb Edavanna</h5> -->
-         <!-- </div>
-         <div><img src="img/2.jpg" alt=""></div>
-         <div><img src="img/3.jpg" alt=""></div>
-         <div><img src="img/4.jpg" alt=""></div>
-         <div><img src="img/5.jpg" alt=""></div>
-         <div>
-            <img src="img/1.jpg" alt=""> -->
-            <!-- <h5>Haseeb Edavanna</h5> -->
-         <!-- </div>
-         <div><img src="img/2.jpg" alt=""></div>
-         <div><img src="img/3.jpg" alt=""></div>
-         <div><img src="img/4.jpg" alt=""></div>
-         <div><img src="img/5.jpg" alt=""></div>
-         
-      </div>
-   </div> -->
-
    <!-- Review -->
    <div class="reviws">
+      <!-- <div class="review-head">WHAT PEOPLE SAY<br>ABOUT US</div> -->
    <div class="blog-slider">
       <div class="blog-slider__wrp swiper-wrapper">
       <div class="blog-slider__item swiper-slide">
@@ -230,6 +407,37 @@
 
 
 
+   <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+    </script>
 
    
 </body>
